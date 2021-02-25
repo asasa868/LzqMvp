@@ -1,0 +1,84 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.shuyi.lzqmvp"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+
+        buildTypes {
+            debug {
+                buildConfigField("String", "HttpUrl", "${rootProject.ext.http.debug}")
+                buildConfigField("boolean", "isDebug", "${rootProject.ext.build.LogDebug}")
+            }
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                buildConfigField("String", "HttpUrl", "${rootProject.ext.http.release}")
+                buildConfigField("boolean", "isDebug", "${rootProject.ext.build.LogRelease}")
+            }
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //权限申请
+    implementation rootProject.ext.dependencies.easypermissions
+    //AutoDispose解决RxJava内存泄漏
+    implementation rootProject.ext.dependencies.autodispose
+    implementation rootProject.ext.dependencies.autodisposeAndroid
+    implementation rootProject.ext.dependencies.autodisposeAndroidArchcomponents
+    //events
+    implementation rootProject.ext.dependencies.eventbus
+    //retrofit2
+    implementation rootProject.ext.dependencies.retrofit
+    implementation rootProject.ext.dependencies.converterGson
+    implementation rootProject.ext.dependencies.adapterRxjava2
+    //rxjava2
+    implementation rootProject.ext.dependencies.rxjava
+    implementation rootProject.ext.dependencies.rxandroid
+    //okhttp3日打印
+    implementation rootProject.ext.dependencies.logging
+    implementation rootProject.ext.dependencies.PersistentCookieJar
+    //屏幕适配
+    implementation rootProject.ext.dependencies.autosize
+    //Glide
+    implementation rootProject.ext.dependencies.glide
+    annotationProcessor rootProject.ext.dependencies.compiler
+    implementation rootProject.ext.dependencies.transformations
+    implementation rootProject.ext.dependencies.gpuimage
+    //状态栏
+    implementation rootProject.ext.dependencies.YCStatusBarLib
+    //刷新
+    api rootProject.ext.dependencies.SmartRefreshLayout
+    api rootProject.ext.dependencies.SmartRefreshHeader
+    //请求加载框
+    implementation rootProject.ext.dependencies.nineoldandroids
+    //腾讯mmkv
+    implementation rootProject.ext.dependencies.MMKV
+}

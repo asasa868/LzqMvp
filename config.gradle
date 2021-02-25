@@ -1,0 +1,90 @@
+ext {
+
+    android = [
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.2",
+            applicationId    : "com.shuyi.lzqmvp",
+            minSdkVersion    : 21,
+            targetSdkVersion : 30,
+            jvmTarget        : '1.8',
+
+    ]
+
+    build = [
+            versionCode: 1,
+            versionName: "1.0.0",
+
+            LogDebug  : "true",
+            LogRelease: "false",
+    ]
+
+    http = [
+            debug  : "\"http://dev.aiadmin.com/\"",
+            release: "\"https://www.aiadmin.com/\"",
+    ]
+
+    version = [
+            easypermissionsVersion                 : "3.0.0",
+            autodisposeVersion                     : "0.7.0",
+            autodisposeAndroidVersion              : "0.7.0",
+            autodisposeAndroidArchcomponentsVersion: "0.7.0",
+            eventbusVersion                        : "3.0.0",
+            retrofitVersion                        : "2.9.0",
+            converterGsonVersion                   : "2.5.0",
+            adapterRxjava2Version                  : "2.5.0",
+            rxjavaVersion                          : "2.2.8",
+            rxandroidVersion                       : "2.1.1",
+            loggingVersion                         : "3.10.0",
+            PersistentCookieJarVersion             : "v1.0.1",
+            nineoldandroidsVersion                 : "2.4.0",
+            autosizeVersion                        : "1.2.1",
+            kotlinJDKVersion                       : "1.3.72",
+            glideVersion                           : "4.10.0",
+            compilerVersion                        : "4.8.0",
+            transformationsVersion                 : "4.1.0",
+            YCStatusBarLibVersion                  : "1.4.3",
+            gpuimageVersion                        : "1.4.1",
+            SmartRefreshLayoutVersion              : "1.0.5.1",
+            PickerViewVersion                      : "5.2.2",
+            zhihuVersion                           : "0.5.3-beta3",
+            goldzeVersion                          : "3.1.4",
+            bannerVersion                          : "1.4.10",
+            EasyBannerVersion                      : "1.0.4",
+            ConvenientBannerVersion                : "2.1.4",
+            MMKVVersion                            : "1.2.7",
+    ]
+
+    dependencies = [
+            "easypermissions"                 : "pub.devrel:easypermissions:${version["easypermissionsVersion"]}",
+            "autodispose"                     : "com.uber.autodispose:autodispose:${version["autodisposeVersion"]}",
+            "autodisposeAndroid"              : "com.uber.autodispose:autodispose-android:${version["autodisposeAndroidVersion"]}",
+            "autodisposeAndroidArchcomponents": "com.uber.autodispose:autodispose-android-archcomponents:${version["autodisposeAndroidArchcomponentsVersion"]}",
+            "eventbus"                        : "org.greenrobot:eventbus:${version["eventbusVersion"]}",
+            "retrofit"                        : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
+            "converterGson"                   : "com.squareup.retrofit2:converter-gson:${version["converterGsonVersion"]}",
+            "adapterRxjava2"                  : "com.squareup.retrofit2:adapter-rxjava2:${version["adapterRxjava2Version"]}",
+            "rxjava"                          : "io.reactivex.rxjava2:rxjava:${version["rxjavaVersion"]}",
+            "rxandroid"                       : "io.reactivex.rxjava2:rxandroid:${version["rxandroidVersion"]}",
+            "logging"                         : "com.squareup.okhttp3:logging-interceptor:${version["loggingVersion"]}",
+            "PersistentCookieJar"             : "com.github.franmontiel:PersistentCookieJar:${version["PersistentCookieJarVersion"]}",
+            "nineoldandroids"                 : "com.nineoldandroids:library:${version["nineoldandroidsVersion"]}",
+            "autosize"                        : "me.jessyan:autosize:${version["autosizeVersion"]}",
+            "kotlin"                          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${version["kotlinJDKVersion"]}",
+            "EasyBanner"                      : "com.github.huanhan:EasyBanner:${version["EasyBannerVersion"]}",
+            "glide"                           : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
+            "compiler"                        : "com.github.bumptech.glide:compiler:${version["compilerVersion"]}",
+            "transformations"                 : "jp.wasabeef:glide-transformations:${version["transformationsVersion"]}",
+            "gpuimage"                        : "jp.co.cyberagent.android.gpuimage:gpuimage-library:${version["gpuimageVersion"]}",
+            "YCStatusBarLib"                  : "cn.yc:YCStatusBarLib:${version["YCStatusBarLibVersion"]}",
+            "SmartRefreshLayout"              : "com.scwang.smartrefresh:SmartRefreshLayout:${version["SmartRefreshLayoutVersion"]}",
+            "SmartRefreshHeader"              : "com.scwang.smartrefresh:SmartRefreshHeader:${version["SmartRefreshLayoutVersion"]}",
+            "PickerView"                      : "liji.library.dev:citypickerview:${version["PickerViewVersion"]}",
+            "zhihu"                           : "com.zhihu.android:matisse:${version["zhihuVersion"]}",
+            "goldze"                          : "com.github.goldze:MVVMHabit:${version["goldzeVersion"]}",
+            "banner"                          : "com.youth.banner:banner:${version["bannerVersion"]}",
+            "ConvenientBanner"                : "com.bigkoo:ConvenientBanner:${version["ConvenientBannerVersion"]}",
+            "MMKV"                            : "com.tencent:mmkv-static:${version["MMKVVersion"]}",
+
+    ]
+
+}
