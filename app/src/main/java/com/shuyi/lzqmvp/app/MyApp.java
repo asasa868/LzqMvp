@@ -8,7 +8,7 @@ import com.tencent.mmkv.MMKV;
 /**
  * created by Lzq
  * on 2021/2/19 0019
- * Describe ：
+ * Describe ：Application
  */
 public class MyApp extends Application {
 

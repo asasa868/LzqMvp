@@ -5,6 +5,7 @@ import android.app.Activity;
 import java.util.ArrayList;
 import java.util.Stack;
 
+
 public class ActivityManagerUtil {
 	private static Stack<Activity> activityStack = null;
 	private static ActivityManagerUtil instance = null;

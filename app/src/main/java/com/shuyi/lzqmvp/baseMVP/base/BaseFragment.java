@@ -95,10 +95,6 @@ public abstract class BaseFragment extends Fragment implements BaseView {
         }
     }
 
-    @Override
-    public <T> AutoDisposeConverter<T> bindAutoDispose() {
-        return null;
-    }
 
 
 }

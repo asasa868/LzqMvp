@@ -49,9 +49,5 @@ public abstract class BaseMvpFragment<T extends BasePresenters> extends BaseFrag
         super.onDestroyView();
     }
 
-    @Override
-    public <T> AutoDisposeConverter<T> bindAutoDispose() {
-        return AutoDispose.autoDisposable(AndroidLifecycleScopeProvider
-                .from(this, Lifecycle.Event.ON_DESTROY));
-    }
+
 }

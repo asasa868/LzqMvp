@@ -14,13 +14,13 @@ ext {
             versionCode: 1,
             versionName: "1.0.0",
 
-            LogDebug  : "true",
-            LogRelease: "false",
+            LogDebug   : "true",
+            LogRelease : "false",
     ]
 
     http = [
-            debug  : "\"http://dev.aiadmin.com/\"",
-            release: "\"https://www.aiadmin.com/\"",
+            debug  : "\"http://dev.xxxxxxxxx.com/\"",
+            release: "\"https://www.xxxxxxxx.com/\"",
     ]
 
     version = [
@@ -52,6 +52,7 @@ ext {
             EasyBannerVersion                      : "1.0.4",
             ConvenientBannerVersion                : "2.1.4",
             MMKVVersion                            : "1.2.7",
+            greendaoVersion                        : "3.3.0",
     ]
 
     dependencies = [
@@ -84,6 +85,7 @@ ext {
             "banner"                          : "com.youth.banner:banner:${version["bannerVersion"]}",
             "ConvenientBanner"                : "com.bigkoo:ConvenientBanner:${version["ConvenientBannerVersion"]}",
             "MMKV"                            : "com.tencent:mmkv-static:${version["MMKVVersion"]}",
+            "greendao"                        : "org.greenrobot:greendao:${version["greendaoVersion"]}",
 
     ]
 

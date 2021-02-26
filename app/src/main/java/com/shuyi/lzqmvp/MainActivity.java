@@ -44,9 +44,4 @@ public class MainActivity extends BaseActivity {
     }
 
 
-
-    @Override
-    public <T> AutoDisposeConverter<T> bindAutoDispose() {
-        return null;
-    }
 }

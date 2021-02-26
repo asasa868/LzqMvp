@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.shuyi.lzqmvp.Utils.ActivityManagerUtil;
 import com.shuyi.lzqmvp.Utils.LogUtil;
 import com.shuyi.lzqmvp.Utils.PermissionsUtils;
 import com.shuyi.lzqmvp.Utils.ToastUtils;
@@ -38,7 +39,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
     private ShapeLoadingDialog shapeLoadingDialog;
 
     //！！！！需要在清单列表加上需要的权限
-    private String[] permissions = new String[]{ Manifest.permission.CAMERA};
+    private String[] permissions = new String[]{Manifest.permission.CAMERA};
 
 
     @Subscribe(threadMode = ThreadMode.MAIN)
@@ -55,7 +56,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
 
             @Override
             public void passPermissions() {
-                LogUtil.d( "权限通过!");
+                LogUtil.d("权限通过!");
             }
 
             @Override
@@ -69,6 +70,8 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         setContentView(getLayoutID());
         //注册异步通讯
         EventBus.getDefault().register(this);
+        //activity的管理工具类
+        ActivityManagerUtil.getInstance().addActivity(this);
 
         initBaseViews();
         initBaseData();
@@ -153,8 +156,6 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         //将结果转发给Permissions
         PermissionsUtils.getInstance().onRequestPermissionsResult(this, requestCode, permissions, grantResults);
     }
-
-
 
 
     @Override
