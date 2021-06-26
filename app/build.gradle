@@ -1,9 +1,9 @@
 plugins {
-//    id 'com.android.application'
+    id 'com.android.application'
 }
 //GreenDao插件
 apply plugin: 'org.greenrobot.greendao'
-apply plugin: 'com.android.library'
+//apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 30
